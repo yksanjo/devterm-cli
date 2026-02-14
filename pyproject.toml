@@ -1,0 +1,28 @@
+[project]
+name = "devterm-cli"
+version = "1.0.0"
+description = "DevTerm CLI - Command-line developer utilities"
+authors = [{name = "DevTerm Team"}]
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6.0",
+    "toml>=0.10.2",
+    "xmltodict>=0.13.0",
+    "requests>=2.31.0",
+    "cryptography>=41.0.0",
+    "qrcode>=7.4.2",
+    "markdown>=3.5.0",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+devterm = "devterm_cli.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["devterm_cli*"]
